@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
 using FreeSoundLib;
 
 namespace fslib_Test
@@ -13,9 +12,6 @@ namespace fslib_Test
     {
         static void Main(string[] args)
         {
-            WebClient client;
-            client = new WebClient();
-            client.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
             FreeSound Sound = new FreeSound("Your API Key");
             FSObject[] fso = Sound.quickSearch("bug"); //Here we do a quick search, the result will be always put in an array of FSObject
             WMPLib.WindowsMediaPlayer a = new WMPLib.WindowsMediaPlayer();

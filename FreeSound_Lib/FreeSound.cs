@@ -197,39 +197,45 @@ namespace FreeSoundLib
             req.Add(reqobj);
             if (page != "" && page!=null)
             {
-                reqobj.type = "p";
-                reqobj.valuet = page;
-                req.Add(reqobj);
+                ReqObject reqobj2 = new ReqObject();
+                reqobj2.type = "p";
+                reqobj2.valuet = page;
+                req.Add(reqobj2);
             }
             if (filter != "" && filter != null)
             {
-                reqobj.type = "f";
-                reqobj.valuet = filter;
-                req.Add(reqobj);
+                ReqObject reqobj3 = new ReqObject();
+                reqobj3.type = "f";
+                reqobj3.valuet = filter;
+                req.Add(reqobj3);
             }
             if (sort != "" && sort != null)
             {
-                reqobj.type = "s";
-                reqobj.valuet = sort;
-                req.Add(reqobj);
+                ReqObject reqobj4 = new ReqObject();
+                reqobj4.type = "s";
+                reqobj4.valuet = sort;
+                req.Add(reqobj4);
             }
             if (num_results != "" && num_results != null)
             {
-                reqobj.type = "num_results";
-                reqobj.valuet = num_results;
-                req.Add(reqobj);
+                ReqObject reqobj5 = new ReqObject();
+                reqobj5.type = "num_results";
+                reqobj5.valuet = num_results;
+                req.Add(reqobj5);
             }
             if (fields != "" && fields != null)
             {
-                reqobj.type = "fields";
-                reqobj.valuet = fields;
-                req.Add(reqobj);
+                ReqObject reqobj6 = new ReqObject();
+                reqobj6.type = "fields";
+                reqobj6.valuet = fields;
+                req.Add(reqobj6);
             }
             if (sounds_per_page != "" && sounds_per_page != null)
             {
-                reqobj.type = "sounds_per_page";
-                reqobj.valuet = sounds_per_page;
-                req.Add(reqobj);
+                ReqObject reqobj7 = new ReqObject();
+                reqobj7.type = "sounds_per_page";
+                reqobj7.valuet = sounds_per_page;
+                req.Add(reqobj7);
             }
             ReqObject[] reqArray = (ReqObject[])req.ToArray(typeof(ReqObject));
             this._makeRequest(this._makeUri(this._URI_SOUNDS_SEARCH), "fsxml.xml", reqArray);
@@ -272,42 +278,47 @@ namespace FreeSoundLib
         public FSObject[] contentBasedSearch(String target, String filter, String max_results, String fields, String page, String sounds_per_page)
         {
             ArrayList req = new ArrayList();
-            ReqObject reqobj = new ReqObject();
             if (page != "" && page != null)
             {
+                ReqObject reqobj = new ReqObject();
                 reqobj.type = "p";
                 reqobj.valuet = page;
                 req.Add(reqobj);
             }
             if (filter != "" && filter != null)
             {
-                reqobj.type = "f";
-                reqobj.valuet = filter;
-                req.Add(reqobj);
+                ReqObject reqobj2 = new ReqObject();
+                reqobj2.type = "f";
+                reqobj2.valuet = filter;
+                req.Add(reqobj2);
             }
             if (target != "" && target != null)
             {
-                reqobj.type = "t";
-                reqobj.valuet = target;
-                req.Add(reqobj);
+                ReqObject reqobj3 = new ReqObject();
+                reqobj3.type = "t";
+                reqobj3.valuet = target;
+                req.Add(reqobj3);
             }
             if (max_results != "" && max_results != null)
             {
-                reqobj.type = "max_results";
-                reqobj.valuet = max_results;
-                req.Add(reqobj);
+                ReqObject reqobj4 = new ReqObject();
+                reqobj4.type = "max_results";
+                reqobj4.valuet = max_results;
+                req.Add(reqobj4);
             }
             if (fields != "" && fields != null)
             {
-                reqobj.type = "fields";
-                reqobj.valuet = fields;
-                req.Add(reqobj);
+                ReqObject reqobj5 = new ReqObject();
+                reqobj5.type = "fields";
+                reqobj5.valuet = fields;
+                req.Add(reqobj5);
             }
             if (sounds_per_page != "" && sounds_per_page != null)
             {
-                reqobj.type = "sounds_per_page";
-                reqobj.valuet = sounds_per_page;
-                req.Add(reqobj);
+                ReqObject reqobj6 = new ReqObject();
+                reqobj6.type = "sounds_per_page";
+                reqobj6.valuet = sounds_per_page;
+                req.Add(reqobj6);
             }
             ReqObject[] reqArray = (ReqObject[])req.ToArray(typeof(ReqObject));
             this._makeRequest(this._makeUri(this._URI_SOUNDS_CONTENT_SEARCH), "fsxml.xml", reqArray);
@@ -326,48 +337,54 @@ namespace FreeSoundLib
         public FSObject[] geotag(String min_lat, String max_lat, String min_lon, String max_lon, String page, String fields, String sounds_per_page)
         {
             ArrayList req = new ArrayList();
-            ReqObject reqobj = new ReqObject();
             if (page != "" && page != null)
             {
+                ReqObject reqobj = new ReqObject();
                 reqobj.type = "p";
                 reqobj.valuet = page;
                 req.Add(reqobj);
             }
             if (min_lat != "" && min_lat != null)
             {
-                reqobj.type = "min_lat";
-                reqobj.valuet = min_lat;
-                req.Add(reqobj);
+                ReqObject reqobj2 = new ReqObject();
+                reqobj2.type = "min_lat";
+                reqobj2.valuet = min_lat;
+                req.Add(reqobj2);
             }
             if (max_lat != "" && max_lat != null)
             {
-                reqobj.type = "max_lat";
-                reqobj.valuet = max_lat;
-                req.Add(reqobj);
+                ReqObject reqobj3 = new ReqObject();
+                reqobj3.type = "max_lat";
+                reqobj3.valuet = max_lat;
+                req.Add(reqobj3);
             }
             if (min_lon != "" && min_lon != null)
             {
-                reqobj.type = "min_lon";
-                reqobj.valuet = min_lon;
-                req.Add(reqobj);
+                ReqObject reqobj4 = new ReqObject();
+                reqobj4.type = "min_lon";
+                reqobj4.valuet = min_lon;
+                req.Add(reqobj4);
             }
             if (max_lon != "" && max_lon != null)
             {
-                reqobj.type = "max_lon";
-                reqobj.valuet = max_lon;
-                req.Add(reqobj);
+                ReqObject reqobj5 = new ReqObject();
+                reqobj5.type = "max_lon";
+                reqobj5.valuet = max_lon;
+                req.Add(reqobj5);
             }
             if (fields != "" && fields != null)
             {
-                reqobj.type = "fields";
-                reqobj.valuet = fields;
-                req.Add(reqobj);
+                ReqObject reqobj6 = new ReqObject();
+                reqobj6.type = "fields";
+                reqobj6.valuet = fields;
+                req.Add(reqobj6);
             }
             if (sounds_per_page != "" && sounds_per_page != null)
             {
-                reqobj.type = "sounds_per_page";
-                reqobj.valuet = sounds_per_page;
-                req.Add(reqobj);
+                ReqObject reqobj7 = new ReqObject();
+                reqobj7.type = "sounds_per_page";
+                reqobj7.valuet = sounds_per_page;
+                req.Add(reqobj7);
             }
             ReqObject[] reqArray = (ReqObject[])req.ToArray(typeof(ReqObject));
             this._makeRequest(this._makeUri(this._URI_SOUNDS_GEOTAG), "fsxml.xml", reqArray);
